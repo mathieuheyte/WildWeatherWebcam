@@ -7,11 +7,6 @@ var weatherApp = angular.module('weatherApp', ['ngResource', 'ngRoute'])
 			controller:'currentWeatherController'
 		});
 		
-		$routeProvider.when('/sixteenDayWeather', {
-			templateUrl:'templates/sixteenDayWeather.html',
-			controller:'sixteenDayWeatherController'
-		});
-		
 		$routeProvider.otherwise({redirectTo:'/currentWeather'});
 		
 	});
