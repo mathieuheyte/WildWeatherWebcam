@@ -1,0 +1,70 @@
+<div class="large-12 columns">
+	<form>
+		<div class="large-10 columns">
+			<input type="text" ng-model="city" placeholder=" Enter your city here (e.g: Helsinki)  "/>
+		</div>
+		<div class="large-2 columns">
+			<button class="button postfix" ng-click="searchWeatherByCity(city)">
+				<i class="fa fa-search-plus"></i> Search
+			</button>
+		</div>
+	</form>
+</div>
+
+<div class="row" ng-switch="cod">
+	<div ng-switch-when="200">
+		<div ng-repeat="data in weatherData">
+			<div class="large-6 small-6 columns sixteen-day-forecast">
+				<div class="large-5 columns main-temp-col">
+					<h3 class="city-name">{{city}} <img ng-src="http://openweathermap.org/img/w/{{data.weather.0.icon}}.png" /></h3>
+					<span class="main-temp">{{data.temp.day  | number:1}}</span><span class="celsius-sign">&#8451</span>
+					<p></p>
+					<span class="description"> {{data.weather.0.main}} </span>
+					<br />
+					<br />
+					<span class="record-date">
+						<br />
+						{{data.dt * 1000 | date:'dd.MM.yyyy'}} </span>
+					<br />
+					<br />
+					<p class="humidity">
+						Humidity: {{data.humidity}} %
+					</p>
+
+				</div>
+
+				<div class="large-7 columns">
+					<p></p>
+					<p>
+						Min: <span class="max-min-temp min">{{data.temp.min | number:1}}</span><span class="celsius-sign">&#8451</span>
+					</p>
+
+					<p>
+						Max: <span class="max-min-temp max">{{data.temp.max | number:1}}</span><span class="celsius-sign"> &#8451</span>
+					</p>
+
+					<p>
+						Morning: <span class="max-min-temp morning">{{data.temp.morn | number:1}}</span><span class="celsius-sign">&#8451</span>
+					</p>
+
+					<p>
+						Evening: <span class="max-min-temp evening">{{data.temp.eve | number:1}}</span><span class="celsius-sign"> &#8451</span>
+					</p>
+
+					<p>
+						Night: <span class="max-min-temp night">{{data.temp.night | number:1}}</span><span class="celsius-sign">&#8451</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div ng-switch-when="404">
+		<div class="large-4 large-offset-4 columns">
+			<div data-alert class="alert-box alert round">
+				Error: {{city}} not found
+				<a href="#" class="close">&times;</a>
+			</div>
+		</div>
+	</div>
+</div>
