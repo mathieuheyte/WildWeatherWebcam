@@ -1,6 +1,6 @@
 'use strict';
 
-var weatherApp = angular.module('weatherApp', ['ngResource', 'ngRoute'])
+const weatherApp = angular.module('weatherApp', ['ngResource', 'ngRoute'])
 	.config(function($routeProvider){
 		$routeProvider.when('/currentWeather', {
 			templateUrl:'templates/currentWeather.html',

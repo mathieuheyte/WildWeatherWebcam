@@ -39,7 +39,7 @@
 	vertical-align: top;
 }
 
-.record-date, .sixteen-day-forecast .humidity{
+.record-date, .humidity{
 	font-size: .8em;
 	color: #ccc;
 }
