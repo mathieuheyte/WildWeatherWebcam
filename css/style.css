@@ -1,15 +1,26 @@
 body {
 	background: url("https://cdn.pixabay.com/photo/2017/10/07/17/05/sky-2827189__340.jpg") no-repeat center fixed;
 	background-size: cover;
+	font-family: 'Acme', sans-serif;
 }
 
 .tab-bar {
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
 	height: 4rem;
 	line-height: 4rem;
 }
 
+h1 {
+	padding-top: 0.5rem;
+}
+
+.row, .button {
+	font-family: 'Acme', sans-serif;
+}
+
 .tab-bar h1 {
-	font-size: 2rem;
+	font-size: 1.9rem;
 }
 
 .middle {
@@ -17,10 +28,13 @@ body {
 }
 
 .header{
-	margin-top: 2em;
+	margin-top: 2rem;
+	font-family: 'Acme', sans-serif;
 }
 
 .city-name{
+	font-size: 3rem;
+	font-family: 'Acme', sans-serif;
 	text-transform: capitalize;
 }
 
@@ -45,7 +59,7 @@ body {
 
 .record-date, .humidity{
 	font-size: .8em;
-	color: #ccc;
+	color: rgb(104, 99, 99);
 }
 
 .description{
@@ -61,6 +75,6 @@ body {
 
 @media only screen and (max-width: 768px) {
 	.tab-bar h1 {
-		font-size: 1.3rem;
+		font-size: 1.23rem;
 	}
 }
