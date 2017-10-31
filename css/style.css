@@ -1,19 +1,23 @@
-@media only screen and (max-width: 40em) { 
-	.sixteen-day-forecast{
-		border-bottom: 1px solid #CCC;
-	}
+body {
+	background: url("https://cdn.pixabay.com/photo/2017/10/07/17/05/sky-2827189__340.jpg") no-repeat center fixed;
+	background-size: cover;
 }
 
-@media only screen and (min-width: 40.063em) {
-	.current-weather .max-min-col{
-		border-left: 1px solid #ccc;
-	}
-	
-	.sixteen-day-forecast{
-		border-right: 1px solid #CCC;
-		border-bottom: 1px solid #CCC;
-	}
+.tab-bar {
+	height: 4rem;
+	line-height: 4rem;
+}
 
+.tab-bar h1 {
+	font-size: 2rem;
+}
+
+.middle {
+	text-align: center;
+}
+
+.header{
+	margin-top: 2em;
 }
 
 .city-name{
@@ -49,3 +53,14 @@
 	color: #ccc;
 }
 
+@media only screen and (min-width: 40.063em) {
+	.current-weather .max-min-col{
+		border-left: 1px solid #ccc;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.tab-bar h1 {
+		font-size: 1.3rem;
+	}
+}
