@@ -6,7 +6,7 @@ weatherApp.controller('currentWeatherController',
 	
 	$scope.searchCurrentWeatherByCity = function(city){
 		currentWeatherAppData.getCurrentWeatherData(city)
-			.then(function(res){
+			.then((res) => {
    	  		$scope.weatherData = res;
    	  		$scope.weatherDate = res.dt * 1000; //receiving unix timestamp in seconds, convert to miliseconds
 		});

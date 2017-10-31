@@ -19,19 +19,5 @@ weatherApp.service('currentWeatherAppData', function ($resource, $q, $http) {
 		}
 
 	};
-	
-	const API_URL = "https://webcamstravel.p.mashape.com/webcams/list/nearby={lat},{lng},{radius}?lang=en&show=webcams%3Aimage%2Clocation";
-
-	this.getWebcam = () => {
-		var defer = $q.defer();
-		$http.get(API_URL)
-		.header("X-Mashape-Key", "2AtEE5bqkpmshUgPjMHLYSngVcVIp1R5KhDjsnEb3tIR9UxNXR")
-		.then((response) => {
-			defer.resolve(response.data);
-		}).catch((error) => {
-			defer.reject(error.statusText);
-		});
-		return defer.promise;
-	};
 
 });
